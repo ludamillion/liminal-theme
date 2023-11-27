@@ -1,9 +1,9 @@
-;;; nano-light-theme.el --- N Λ N O theme -*- lexical-binding: t -*-
+;;; liminal-dark-theme.el --- N Λ N O theme -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2021,2022 Free Software Foundation, Inc.
 
 ;; Maintainer: Nicolas P. Rougier <Nicolas.Rougier@inria.fr>
-;; URL: https://github.com/rougier/nano-theme
+;; URL: https://github.com/rougier/liminal-theme
 ;; Version: 0.3.4
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: theme, dark, light
@@ -34,15 +34,15 @@
 ;;
 
 ;;; Code:
-(require 'nano-theme-support)
+(require 'liminal-theme-support)
 
 ;;;###autoload
-(deftheme nano-light
-  "N Λ N O light theme")
+(deftheme liminal-dark
+  "N Λ N O dark theme")
 
-(set-foreground-color nano-light-foreground)
-(set-background-color nano-light-background)
-(nano-theme 'nano-light 'light)
+(set-foreground-color liminal-dark-foreground)
+(set-background-color liminal-dark-background)
+(liminal-theme 'liminal-dark 'dark)
 
-(provide-theme 'nano-light)
-;;; nano-light-theme.el ends here
+(provide-theme 'liminal-dark)
+;;; liminal-dark-theme.el ends here

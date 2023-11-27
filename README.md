@@ -50,46 +50,25 @@ The theme is based on a set of six faces (only):
 Install with [straight.el](https://github.com/raxod502/straight.el):
 
 ```
-(straight-use-package '(nano-theme :type git :host github
-                                   :repo "rougier/nano-theme"))
+(straight-use-package '(liminal-theme :type git :host github
+                                   :repo "ludamillion/liminal-theme"))
 ```
 
 ... or install with [`quelpa`](https://github.com/quelpa/quelpa):
 
 ```emacs-lisp
-(use-package nano-theme
+(use-package liminal-theme
   :ensure nil
   :defer t
-  :quelpa (nano-theme
+  :quelpa (liminal-theme
            :fetcher github
-           :repo "rougier/nano-theme"))
+           :repo "ludamillion/liminal-theme"))
 ```
 
 ### Usage
 
-Load theme directly: `M-x: (load-theme 'nano t)`  
+Load theme directly: `M-x: (load-theme 'liminal t)`  
 
 Alternatively, you can type:
-- `M-x: (nano-light)` for light theme
-- `M-x: (nano-dark)` for dark theme
-
-If you want the same aspect as in the screenshots, you can also use
-`M-x: (nano-mode)` 
-
-
-### Screenshots
-
-<div>
-<img src="./images/nano-theme-light-1.png" width=47.5%>
-<img src="./images/nano-theme-dark-1.png"  width=47.5%>
-</div>
-
-<div>
-<img src="./images/nano-theme-light-2.png" width=47.5%>
-<img src="./images/nano-theme-dark-2.png"  width=47.5%>
-</div>
-
-<div>
-<img src="./images/nano-theme-light-3.png" width=47.5%>
-<img src="./images/nano-theme-dark-3.png"  width=47.5%>
-</div>
+- `M-x: (liminal-light)` for light theme
+- `M-x: (liminal-dark)` for dark theme

@@ -1,9 +1,9 @@
-;;; nano-dark-theme.el --- N Λ N O theme -*- lexical-binding: t -*-
+;;; liminal-theme.el --- N Λ N O theme -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2021,2022 Free Software Foundation, Inc.
 
-;; Maintainer: Nicolas P. Rougier <Nicolas.Rougier@inria.fr>
-;; URL: https://github.com/rougier/nano-theme
+;; Maintainer: Luke D. Inglis <ld.inglis@gmail.com>
+;; URL: https://github.com/ludamillion/nano-theme
 ;; Version: 0.3.4
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: theme, dark, light
@@ -25,24 +25,27 @@
 
 ;;; Commentary:
 ;;
-;; N Λ N O theme is a consistent theme that comes in two flavors:
-;;  - a light theme that is based on Material (https://material.io/)
-;;  - a dark theme that is based on Nord (https://www.nordtheme.com/).
+;; Liminal theme is a consistent theme that comes in light and
+;; dark variations with colors derived from Protesilaos Stavrou's
+;; lovely Modus themes and overall.  It is a fork of Nicolas
+;; Rougier's N Λ N O theme and aims to mostly follow the same
+;; design goals.
+;;
+;; References
+;; - https://protesilaos.com/emacs/modus-themes
+;; - https://github.com/rougier/nano-theme
 ;;
 ;; A theme is fully defined by a set of (1+6) faces as explained in
 ;; "On the Design of Text Editors" / https://arxiv.org/abs/2008.06030
 ;;
 
 ;;; Code:
-(require 'nano-theme-support)
+(require 'liminal-theme-support)
 
 ;;;###autoload
-(deftheme nano-dark
-  "N Λ N O dark theme")
+(deftheme liminal "λinimal theme.")
 
-(set-foreground-color nano-dark-foreground)
-(set-background-color nano-dark-background)
-(nano-theme 'nano-dark 'dark)
+(liminal-theme 'liminal (frame-parameter (selected-frame) 'background-mode))
 
-(provide-theme 'nano-dark)
-;;; nano-dark-theme.el ends here
+(provide-theme 'liminal)
+;;; liminal-theme.el ends here
