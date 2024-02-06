@@ -168,8 +168,8 @@
   :type 'integer :group 'liminal-fonts)
 
 (defface liminal-mono
-  '((t (:weight medium :width expanded :family "Iosevka")))
-  "Default monospaced font (Noto Sans Mono, 14pt)."
+  '((t (:weight normal :width expanded :family "Iosevka")))
+  "Default monospaced font (Iosevka (expanded), 14pt)."
   :group 'liminal-theme-fonts)
 
 (defface liminal-mono-alt
@@ -417,8 +417,32 @@ background color that is barely perceptible."
   "Default face inversed."
   :group nil)
 
+(defface liminal-base16-blue nil
+  "Blue base color."
+  :group 'liminal-theme-colors)
+
+(defface liminal-base16-cyan nil
+  "Cyan base color."
+  :group 'liminal-theme-colors)
+
+(defface liminal-base16-green nil
+  "Green base color."
+  :group 'liminal-theme-colors)
+
+(defface liminal-base16-red nil
+  "Red base color."
+  :group 'liminal-theme-colors)
+
+(defface liminal-base16-magenta nil
+  "Magenta base color."
+  :group 'liminal-theme-colors)
+
+(defface liminal-base16-yellow nil
+  "Yellow base color."
+  :group 'liminal-theme-colors)
+
 (defun liminal-mode ()
-  "Defaults settings for liminal (optional)"
+  "Defaults settings for liminal (optional)."
   (interactive)
 
   ;; Use liminal fonts
@@ -496,9 +520,9 @@ background color that is barely perceptible."
                  '(min-height . 1)  '(height . 32)
                  '(min-width  . 1)  '(width  . 96)
                  '(vertical-scroll-bars . nil)
-                 '(internal-border-width . 16)
-                 '(left-fringe . 0)
-                 '(right-fringe . 0)
+                 '(internal-border-width . 0)
+                 '(left-fringe . 8)
+                 '(right-fringe . 8)
                  '(undecorated-round . t) ;; emacs-plu@29 only
                  '(tool-bar-lines . 0)
                  '(menu-bar-lines . 0))))
@@ -902,6 +926,9 @@ background color that is barely perceptible."
                             '(custom-state                  ((t (:inherit liminal-salient))))
                             '(custom-link                   ((t (:inherit liminal-salient))))
                             '(custom-variable-obsolete      ((t (:inherit liminal-faded))))
+
+                            ;; --- Whitespace Mode ----------------------------------------------
+                            
 
                             ;; --- Company tooltip ----------------------------------------------
                             '(company-tooltip                      ((t (:inherit liminal-subtle))))
@@ -1601,6 +1628,24 @@ background color that is barely perceptible."
                             '(ansi-color-bright-white   ((t (:inherit default))))
                             '(ansi-color-yellow         ((t (:inherit liminal-base16-yellow))))
                             '(ansi-color-bright-yellow  ((t (:inherit liminal-base16-yellow))))
+
+                            ;; --- vterm colors ----------------------------------------------------
+
+                            '(vterm-color-black          ((t (:inherit liminal-default))))
+                            '(vterm-color-blue           ((t (:inherit liminal-base16-blue))))
+                            '(vterm-color-bright-blue    ((t (:inherit liminal-base16-blue))))
+                            '(vterm-color-cyan           ((t (:inherit liminal-base16-cyan))))
+                            '(vterm-color-bright-cyan    ((t (:inherit liminal-base16-cyan))))
+                            '(vterm-color-green          ((t (:inherit liminal-base16-green))))
+                            '(vterm-color-bright-green   ((t (:inherit liminal-base16-green))))
+                            '(vterm-color-magenta        ((t (:inherit liminal-base16-magenta))))
+                            '(vterm-color-bright-magenta ((t (:inherit liminal-base16-magenta))))
+                            '(vterm-color-red            ((t (:inherit liminal-base16-red))))
+                            '(vterm-color-bright-red     ((t (:inherit liminal-base16-red))))
+                            '(vterm-color-white          ((t (:inherit liminal-subtle))))
+                            '(vterm-color-bright-white   ((t (:inherit default))))
+                            '(vterm-color-yellow         ((t (:inherit liminal-base16-yellow))))
+                            '(vterm-color-bright-yellow  ((t (:inherit liminal-base16-yellow))))
 
                             ;; --- Terminal ----------------------------------------------------
                             '(term-bold          ((t (:inherit liminal-strong))))
