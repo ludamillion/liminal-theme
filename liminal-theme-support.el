@@ -136,11 +136,11 @@
 (require 'cl-macs)
 
 (defgroup liminal nil
-  "N Λ N O"
+  "Liminal"
   :group 'convenience)
 
 (defgroup liminal-theme nil
-  "N Λ N O Theme"
+  "Liminal Theme"
   :group 'liminal)
 
 (defgroup liminal-theme-light nil
@@ -168,7 +168,7 @@
   :type 'integer :group 'liminal-fonts)
 
 (defface liminal-mono
-  '((t (:weight normal :width expanded :family "Iosevka")))
+  '((t (:weight normal :family "JuliaMono")))
   "Default monospaced font (Iosevka (expanded), 14pt)."
   :group 'liminal-theme-fonts)
 
@@ -542,10 +542,10 @@ background color that is barely perceptible."
                           'wrap (make-glyph-code ?- 'liminal-faded))
 
   ;; Nerd font for glyph icons
-  (let ((roboto-nerd (font-spec :name "RobotoMono Nerd Font Mono")))
-    (if (find-font roboto-nerd)
-        (set-fontset-font t '(#xe000 . #xffdd) roboto-nerd)
-      (message "Roboto Mono Nerd font has not been found on your system"))))
+  (let ((symbols-nerd (font-spec :name "Symbols Nerd Font Mono" :weight 'regular)))
+    (if (find-font symbols-nerd)
+        (set-fontset-font t '(#xe000 . #xffdd) symbols-nerd)
+      (message "Symbols Mono Nerd font has not been found on your system"))))
 
 
 ;; (defun inherit (face &optional inherit)
@@ -801,44 +801,6 @@ background color that is barely perceptible."
                                                      (,dark  (:foreground "#C7BD9B" :background "#DBD5BF"
                                                                           :weight normal))))
 
-                            ;; --- Header & mode line -------------------------------------------
-
-                            `(mode-line ((,light (:foreground ,liminal-light-background
-                                                              :background ,liminal-light-foreground
-                                                              :box (:line-width 3
-                                                                                :color ,liminal-light-foreground
-                                                                                :style nil)))
-                                         (,dark  (:foreground ,liminal-dark-foreground
-                                                              :background ,liminal-dark-faded
-                                                              :box (:line-width 3
-                                                                                :color ,liminal-dark-faded
-                                                                                :style nil)))))
-                            `(mode-line-highlight ((t (:inherit liminal-popout))))
-                            `(mode-line-buffer-id ((t (:weight regular))))
-                            `(mode-line-emphasis  ((t (:weight regular))))
-
-                            `(mode-line-inactive ((,light (:foreground ,liminal-light-background
-                                                                       :background ,liminal-light-faded
-                                                                       :box (:line-width 3
-                                                                                         :color ,liminal-light-faded
-                                                                                         :style nil)))
-                                                  (,dark  (:foreground ,liminal-dark-faded
-                                                                       :background ,liminal-dark-subtle
-                                                                       :box (:line-width 3
-                                                                                         :color ,liminal-dark-subtle
-                                                                                         :style nil)))))
-
-                            `(header-line ((,light (:foreground ,liminal-light-foreground
-                                                                :background ,liminal-light-subtle
-                                                                :inherit nil
-                                                                :box nil))
-                                           (,dark  (:foreground ,liminal-dark-foreground
-                                                                :background ,liminal-dark-subtle
-                                                                :inherit nil
-                                                                :box nil))))
-
-
-
                             ;; --- Structural ---------------------------------------------------
                             '(bold                        ((t (:inherit liminal-strong))))
                             ;; '(italic                      ((t (:slant italic))))
@@ -866,7 +828,7 @@ background color that is barely perceptible."
                             '(show-paren-match              ((t (:inherit liminal-salient))))
                             '(show-paren-mismatch           ((t (:inherit liminal-critical))))
                             '(lazy-highlight                ((t (:inherit liminal-subtle))))
-                            '(trailing-whitespace           ((t (:inherit liminal-subtle))))
+                            '(trailing-whitespace           ((t (:inherit liminal-faded))))
                             '(secondary-selection           ((t (:inherit liminal-subtle))))
                             '(completions-annotations       ((t (:inherit liminal-faded))))
                             '(completions-common-part       ((t (:inherit liminal-strong))))
@@ -928,6 +890,10 @@ background color that is barely perceptible."
                             '(custom-variable-obsolete      ((t (:inherit liminal-faded))))
 
                             ;; --- Whitespace Mode ----------------------------------------------
+
+                            '(whitespace-trailing ((t (:inherit liminal-critical-i))))
+                            '(whitespace-line ((t (:inherit liminal-critical))))
+                                                           
                             
 
                             ;; --- Company tooltip ----------------------------------------------
@@ -1013,24 +979,24 @@ background color that is barely perceptible."
                             '(helpful-heading                ((t (:inherit liminal-strong))))
 
                             ;; --- Liminal modeline ------------------------------------------------
-                            '(liminal-modeline-active               ((t (:inherit liminal-subtle))))
-                            '(liminal-modeline-active-name          ((t (:inherit (liminal-strong liminal-modeline-active)))))
-                            '(liminal-modeline-active-primary       ((t (:inherit (liminal-default liminal-modeline-active)))))
-                            '(liminal-modeline-active-secondary     ((t (:inherit (liminal-faded liminal-modeline-active)))))
-                            '(liminal-modeline-active-status-RO     ((t (:inherit (liminal-subtle liminal-strong)))))
-                            '(liminal-modeline-active-status-RW     ((t (:inherit (liminal-faded-i liminal-strong)))))
-                            '(liminal-modeline-active-status-**     ((t (:inherit (liminal-popout-i liminal-strong)))))
+                            ;; '(liminal-modeline-active               ((t (:inherit liminal-subtle))))
+                            ;; '(liminal-modeline-active-name          ((t (:inherit (liminal-strong liminal-modeline-active)))))
+                            ;; '(liminal-modeline-active-primary       ((t (:inherit (liminal-default liminal-modeline-active)))))
+                            ;; '(liminal-modeline-active-secondary     ((t (:inherit (liminal-faded liminal-modeline-active)))))
+                            ;; '(liminal-modeline-active-status-RO     ((t (:inherit (liminal-subtle liminal-strong)))))
+                            ;; '(liminal-modeline-active-status-RW     ((t (:inherit (liminal-faded-i liminal-strong)))))
+                            ;; '(liminal-modeline-active-status-**     ((t (:inherit (liminal-popout-i liminal-strong)))))
 
-                            '(liminal-modeline-inactive             ((t (:inherit liminal-subtle))))
-                            '(liminal-modeline-inactive-name        ((t (:inherit (liminal-faded liminal-modeline-inactive)))))
-                            '(liminal-modeline-inactive-primary     ((t (:inherit (liminal-faded liminal-modeline-inactive)))))
-                            '(liminal-modeline-inactive-secondary   ((t (:inherit (liminal-faded liminal-modeline-inactive)))))
-                            '(liminal-modeline-inactive-status-RO   ((t (:inherit (liminal-faded
-                                                                                   liminal-strong liminal-modeline-inactive)))))
-                            '(liminal-modeline-inactive-status-RW   ((t (:inherit (liminal-faded
-                                                                                   liminal-strong liminal-modeline-inactive)))))
-                            '(liminal-modeline-inactive-status-**   ((t (:inherit (liminal-popout
-                                                                                   liminal-strong liminal-modeline-inactive)))))
+                            ;; '(liminal-modeline-inactive             ((t (:inherit liminal-subtle))))
+                            ;; '(liminal-modeline-inactive-name        ((t (:inherit (liminal-faded liminal-modeline-inactive)))))
+                            ;; '(liminal-modeline-inactive-primary     ((t (:inherit (liminal-faded liminal-modeline-inactive)))))
+                            ;; '(liminal-modeline-inactive-secondary   ((t (:inherit (liminal-faded liminal-modeline-inactive)))))
+                            ;; '(liminal-modeline-inactive-status-RO   ((t (:inherit (liminal-faded
+                            ;;                                                        liminal-strong liminal-modeline-inactive)))))
+                            ;; '(liminal-modeline-inactive-status-RW   ((t (:inherit (liminal-faded
+                            ;;                                                        liminal-strong liminal-modeline-inactive)))))
+                            ;; '(liminal-modeline-inactive-status-**   ((t (:inherit (liminal-popout
+                            ;;                                                        liminal-strong liminal-modeline-inactive)))))
 
                             ;; --- liminal agenda ---------------------------------------------------------
                             '(liminal-agenda-button               ((t (:inherit (liminal-faded)))))
