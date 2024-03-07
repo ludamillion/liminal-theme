@@ -40,8 +40,8 @@
 (deftheme liminal-light
   "N Λ N O light theme")
 
-(set-foreground-color liminal-light-foreground)
-(set-background-color liminal-light-background)
+(set-foreground-color liminal-black)
+(set-background-color liminal-white)
 (liminal-theme 'liminal-light 'light)
 
 (provide-theme 'liminal-light)

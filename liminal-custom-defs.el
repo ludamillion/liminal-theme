@@ -60,33 +60,36 @@
   :group 'liminal-theme-fonts)
 
 (defface liminal-italic
-  '((t (:family "Victor Mono"
-        :slant italic
-        :weight regular)))
-  "Default italic font (Victor Mono Italic)."
+  '((t (:family "JuliaMono"
+        :slant italic)))
+  "Default italic font (JuliaMono)."
   :group 'liminal-theme-fonts)
 
-(defcustom liminal-light-white "#F9FAFA"
+(defcustom liminal-white "#FAFAFA"
   "Default background color."
   :type 'color :group 'liminal-theme-light)
 
-(defcustom liminal-light-black "#2D3A41"
-  "Default foreground color."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-grey "#D2D5D7"
-  "Base grey."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-grey- "#9EA6AA"
-  "Darker grey."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-grey+ "#ECEFF1"
+(defcustom liminal-off-white "#E2E2E2"
   "Lighter grey."
   :type 'color :group 'liminal-theme-light)
 
-(defcustom liminal-light-blue "#6968BD"
+(defcustom liminal-black "#222222"
+  "Default foreground color."
+  :type 'color :group 'liminal-theme-light)
+
+(defcustom liminal-off-black "#3e3e3e"
+  "Default foreground color."
+  :type 'color :group 'liminal-theme-light)
+
+(defcustom liminal-light-grey "#9EA6AA"
+  "Darker grey."
+  :type 'color :group 'liminal-theme-light)
+
+(defcustom liminal-dark-grey "#6f6f6f"
+  "Darker grey."
+  :type 'color :group 'liminal-theme-light)
+
+(defcustom liminal-light-blue "#00749d"
   "Primary blue."
   :type 'color :group 'liminal-theme-light)
 
@@ -94,138 +97,44 @@
   "Primary cyan."
   :type 'color :group 'liminal-theme-light)
 
-(defcustom liminal-light-green "#3E801F"
+(defcustom liminal-light-green "#007a7b"
   "Primary green."
   :type 'color :group 'liminal-theme-light)
 
-(defcustom liminal-light-red "#C04949"
+(defcustom liminal-light-red "#db0072"
   "Primary red."
   :type 'color :group 'liminal-theme-light)
 
-(defcustom liminal-light-magenta "#9F5C80"
+(defcustom liminal-light-magenta "#d2008f"
   "Primary magenta."
   :type 'color :group 'liminal-theme-light)
 
-(defcustom liminal-light-yellow "#856F27"
+(defcustom liminal-light-yellow "#926700"
   "Primary yellow."
   :type 'color :group 'liminal-theme-light)
 
-(defcustom liminal-light-yellow-alt "#755C0B"
-  "Secondary yellow."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-foreground liminal-light-black
-  "Foreground color."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-background liminal-light-white
-  "Background color."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-highlight liminal-light-grey+
-  "Highlight: used to highlight part of the screen."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-subtle liminal-light-grey
-  "Subtle: used to suggest a physical area on the screen."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-faded liminal-light-grey-
-  "Faded: for information that is less important."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-salient liminal-light-cyan
-  "Salient: used for information that is important."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-popout liminal-light-green
-  "Popout: used for information that needs attention."
-  :type 'color :group 'liminal-theme-light)
-
-(defcustom liminal-light-critical liminal-light-red
-  "Critical: for information that requires immediate action."
-  :type 'color :group 'liminal-theme-light)
-
-;;; New stuff
-
-(defcustom liminal-dark-white "#F9FAFA"
-  "Default background color."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-black "#2D3A41"
-  "Default foreground color."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-grey "#838C91"
-  "Base grey."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-grey- "#677379"
-  "Darker grey."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-grey+ "#9EA6AA"
-  "Darker grey."
-  :type 'color :group 'liminal-theme-dark)
-
-;; (defcustom liminal-dark-grey-alt "#D2D5D7"
-;;   "Darker dark foreground color."
-;;   :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-blue "#B2BBE3"
+(defcustom liminal-dark-blue "#0092c5"
   "Primary blue."
   :type 'color :group 'liminal-theme-dark)
 
-(defcustom liminal-dark-cyan  "#9FC2D3"
+(defcustom liminal-dark-cyan  "#00999a"
   "Primary cyan."
   :type 'color :group 'liminal-theme-dark)
 
-(defcustom liminal-dark-green "#A3C69D"
+(defcustom liminal-dark-green "#00a21f"
   "Primary green."
   :type 'color :group 'liminal-theme-dark)
 
-(defcustom liminal-dark-red "#E4B0B0"
+(defcustom liminal-dark-red "#ff3b8d"
   "Primary red."
   :type 'color :group 'liminal-theme-dark)
 
-(defcustom liminal-dark-magenta "#D3B4C5"
+(defcustom liminal-dark-magenta "#ff426c"
   "Primary magenta."
   :type 'color :group 'liminal-theme-dark)
 
-(defcustom liminal-dark-yellow "#C7BD9B"
+(defcustom liminal-dark-yellow "#b98300"
   "Primary yellow."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-foreground liminal-dark-black
-  "Foreground color."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-background liminal-dark-white
-  "Background color."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-highlight liminal-dark-grey+
-  "Highdark: used to highdark part of the screen."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-subtle liminal-dark-grey
-  "Subtle: used to suggest a physical area on the screen."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-faded liminal-dark-grey-
-  "Faded: for information that is less important."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-salient liminal-dark-cyan
-  "Salient: used for information that is important."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-popout liminal-dark-green
-  "Popout: used for information that needs attention."
-  :type 'color :group 'liminal-theme-dark)
-
-(defcustom liminal-dark-critical liminal-dark-red
-  "Critical: for information that requires immediate action."
   :type 'color :group 'liminal-theme-dark)
 
 (defface liminal-critical nil
